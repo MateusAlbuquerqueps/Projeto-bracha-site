@@ -13,10 +13,10 @@ function Home() {
         <div className="row mb-5 py-5">
           <div className="col-12 text-center">
             <h1 className="display-3 fw-bold mb-3" style={{ color: '#28a745' }}>
-              SKZ BRacha
+             News!!
             </h1>
             <p className="lead text-dark">
-              Portal feito de fãs para fãs
+              Portal feito para fãs do Stray Kids.
             </p>
           </div>
         </div>
@@ -26,7 +26,7 @@ function Home() {
           <div className="col-md-4">
             <div className="card h-100 shadow-lg" style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)' }}>
               <div className="card-body">
-                <h5 className="card-title">🎵 Última Notícia</h5>
+                <h5 className="card-title">🎵 Última Notícias</h5>
                 <p className="card-text">
                   Fique por dentro das últimas novidades do grupo.
                 </p>

@@ -6,10 +6,10 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <p className="mb-0">© 2024 Baby Stay. Todos os direitos reservados.</p>
+            <p className="mb-0">© 2026. Todos os direitos reservados.</p>
           </div>
           <div className="col-md-6 text-center text-md-end">
-            <p className="mb-0">Feito com ❤️ pelos fãs</p>
+            <p className="mb-0">Feito......</p>
           </div>
         </div>
       </div>
