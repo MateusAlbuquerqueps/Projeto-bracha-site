@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Carousel.css';
 
@@ -76,16 +76,7 @@ function Carousel() {
     }
   ];
 
-  // Auto-play - troca a cada 4 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => {
       if (prevIndex === membros.length - 1) {
         setUseLongTransition(true);
@@ -93,7 +84,13 @@ function Carousel() {
       }
       return prevIndex + 1;
     });
-  };
+  }, [membros.length]);
+
+  // Auto-play - troca a cada 4 segundos
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
 
   // Volta à transição normal após a volta completa (último → primeiro)
   useEffect(() => {

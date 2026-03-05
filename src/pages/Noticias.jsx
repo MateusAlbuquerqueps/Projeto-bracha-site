@@ -80,13 +80,13 @@ function Noticias() {
             <span className="page-link">1</span>
           </li>
           <li className="page-item">
-            <a className="page-link" href="#">2</a>
+            <Link to="/noticias?page=2" className="page-link">2</Link>
           </li>
           <li className="page-item">
-            <a className="page-link" href="#">3</a>
+            <Link to="/noticias?page=3" className="page-link">3</Link>
           </li>
           <li className="page-item">
-            <a className="page-link" href="#">Próximo</a>
+            <Link to="/noticias?page=2" className="page-link">Próximo</Link>
           </li>
         </ul>
       </nav>

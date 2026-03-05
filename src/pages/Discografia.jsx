@@ -39,7 +39,7 @@ function Discografia() {
               <div className="card-body">
                 <h6 className="card-title">🎧 Melhores Músicas</h6>
                 <p className="card-text small text-muted">As músicas mais tocadas</p>
-                <a href="#" className="btn btn-sm btn-primary">Ouvir no Spotify</a>
+                <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">Ouvir no Spotify</a>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ function Discografia() {
               <div className="card-body">
                 <h6 className="card-title">🎤 B-Sides</h6>
                 <p className="card-text small text-muted">Lado B dos álbuns</p>
-                <a href="#" className="btn btn-sm btn-primary">Ouvir no Spotify</a>
+                <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">Ouvir no Spotify</a>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ function Discografia() {
               <div className="card-body">
                 <h6 className="card-title">💿 Completo</h6>
                 <p className="card-text small text-muted">Toda a discografia</p>
-                <a href="#" className="btn btn-sm btn-primary">Ouvir no Spotify</a>
+                <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">Ouvir no Spotify</a>
               </div>
             </div>
           </div>

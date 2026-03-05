@@ -100,7 +100,7 @@ As vendas de ingressos começam na próxima semana. Confira as datas e cidades n
               <div className="card-body">
                 <h6 className="card-title">Outra notícia interessante</h6>
                 <p className="card-text small text-muted">Resumo da notícia...</p>
-                <a href="#" className="btn btn-sm btn-outline-primary">Ler mais</a>
+                <Link to="/noticias" className="btn btn-sm btn-outline-primary">Ler mais</Link>
               </div>
             </div>
           </div>
