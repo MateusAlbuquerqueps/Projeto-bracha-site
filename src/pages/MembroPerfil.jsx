@@ -321,7 +321,7 @@ function MembroPerfil() {
         {
           titulo: 'Youth',
           ano: 2024,
-          descricao: 'Faixa solo do mixtape HOP; energia jovem e melodia envolvente.',
+          descricao: 'Faixa solo do mixtape HOP; energia jovem e uma melodia envolvente.',
           spotify: 'https://open.spotify.com/track/6fOLPHRGb6putSY6xFk45t'
         },
         {
