@@ -1,0 +1,259 @@
+/* ============================================
+   BOTÃO HAMBÚRGUER
+   ============================================ */
+
+.hamburger-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+}
+
+.hamburger-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animação quando menu está aberto */
+.hamburger-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================
+   OVERLAY ESCURO
+   ============================================ */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============================================
+   MENU LATERAL
+   ============================================ */
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
+  transition: left 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+/* ============================================
+   HEADER DO MENU
+   ============================================ */
+
+.menu-header {
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #ffd700;
+}
+
+.menu-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.3s ease;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+  color: #ffd700;
+}
+
+/* ============================================
+   LINKS DO MENU
+   ============================================ */
+
+.menu-links {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.menu-links li {
+  margin: 0;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 25px;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Barra verde animada ao passar o mouse */
+.menu-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(180deg, #28a745, #1e7e34);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-link:hover::before {
+  transform: scaleY(1);
+}
+
+.menu-link:hover {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  padding-left: 35px;
+}
+
+.menu-link.active {
+  background: linear-gradient(90deg, rgba(40, 167, 69, 0.2), transparent);
+  color: #28a745;
+  border-left: 5px solid #28a745;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.menu-link:hover .menu-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.menu-text {
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   FOOTER DO MENU
+   ============================================ */
+
+.menu-footer {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #999;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .side-menu {
+    width: 280px;
+    left: -280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-menu {
+    width: 100%;
+    max-width: 280px;
+    left: -100%;
+  }
+}
+
+/* ============================================
+   SCROLLBAR CUSTOMIZADA (opcional)
+   ============================================ */
+
+.side-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-menu::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background: #28a745;
+  border-radius: 4px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+  background: #1e7e34;
+}

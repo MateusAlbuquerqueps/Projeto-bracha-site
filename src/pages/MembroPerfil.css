@@ -1,0 +1,101 @@
+/* ============================================
+   HEADER DO PERFIL
+   ============================================ */
+
+   .perfil-header {
+    width: 100%;
+    height: min(60vh, 520px);
+    min-height: 280px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .perfil-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 60px 0 30px 0;
+  }
+  
+  .perfil-nome {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  .perfil-nome-korean {
+    color: #28a745;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .perfil-posicao {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  /* ============================================
+     CARDS E CONTEÚDO
+     ============================================ */
+  
+  .membro-perfil .card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .membro-perfil .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .membro-perfil .card-title {
+    color: #28a745;
+    font-weight: bold;
+  }
+
+  .perfil-projeto-spotify {
+    color: #1db954;
+    flex-shrink: 0;
+    line-height: 0;
+    padding: 4px;
+    border-radius: 6px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .perfil-projeto-spotify:hover {
+    color: #1ed760;
+    background-color: rgba(29, 185, 84, 0.12);
+  }
+  
+  /* ============================================
+     RESPONSIVIDADE
+     ============================================ */
+  
+  @media (max-width: 768px) {
+    .perfil-header {
+      height: min(48vh, 420px);
+      min-height: 240px;
+    }
+  
+    .perfil-nome {
+      font-size: 36px;
+    }
+  
+    .perfil-nome-korean {
+      font-size: 20px;
+    }
+  
+    .perfil-posicao {
+      font-size: 16px;
+    }
+  }
+  
